@@ -33,7 +33,8 @@ const getAllProducts = async (req, res) => {
       let fieldList = field.split(",").join(" ");
       result = result.select(fieldList);
     }
-    //?????? ******* PAGINATION AND LIMIT (time stamp 4:50) ?????? ******//
+    //?????? ******* PAGINATION AND LIMIT (time stamp 4:39 4:50) ?????? ******//
+    //?????? ******* NUMERIC FILTERS (time stamp  4:50 - 5:06) ?????? ******//
 
     const allProducts = await result;
 
@@ -42,6 +43,8 @@ const getAllProducts = async (req, res) => {
     console.log(error);
   }
 };
+
+// *********** STATIC DATA *************//
 
 const getAllStaticProducts = async (req, res) => {
   try {
